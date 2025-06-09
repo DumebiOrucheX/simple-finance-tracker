@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Finance Tracker</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="main.js"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="#" class="nav-link active" data-target="dashboard">Dashboard</a>
+        <a href="#" class="nav-link" data-target="analytics">Analytics</a>
+        <a href="#" class="nav-link" data-target="profile">Profile</a>
+    </nav>
+    <div class="container">
+        <div id="dashboard" class="page" style="display:block;">
+            <h1>💸 Simple Finance Tracker</h1>
+            <div class="summary">
+                <div class="card">
+                    <h2>Balance</h2>
+                    <p id="balance">$1,200</p>
+                </div>
+                <div class="card">
+                    <h2>Income</h2>
+                    <p id="income">$2,000</p>
+                </div>
+                <div class="card">
+                    <h2>Expenses</h2>
+                    <p id="expenses">$800</p>
+                </div>
+            </div>
+            <h2>Transactions</h2>
+            <table class="transactions">
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Description</th>
+                        <th>Amount</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>2025-06-01</td>
+                        <td>Salary</td>
+                        <td class="income">+$2,000</td>
+                    </tr>
+                    <tr>
+                        <td>2025-06-03</td>
+                        <td>Groceries</td>
+                        <td class="expense">-$150</td>
+                    </tr>
+                    <tr>
+                        <td>2025-06-05</td>
+                        <td>Utilities</td>
+                        <td class="expense">-$200</td>
+                    </tr>
+                    <tr>
+                        <td>2025-06-07</td>
+                        <td>Dining Out</td>
+                        <td class="expense">-$100</td>
+                    </tr>
+                    <tr>
+                        <td>2025-06-09</td>
+                        <td>Transport</td>
+                        <td class="expense">-$50</td>
+                    </tr>
+                    <tr>
+                        <td>2025-06-10</td>
+                        <td>Shopping</td>
+                        <td class="expense">-$300</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div id="analytics" class="page" style="display:none;">
+            <h1>📊 Analytics</h1>
+            <div class="analytics-content">
+                <div class="chart-card">
+                    <h2>Spending Breakdown</h2>
+                    <img src="https://quickchart.io/chart?c={type:'pie',data:{labels:['Groceries','Utilities','Dining Out','Transport','Shopping'],datasets:[{data:[150,200,100,50,300]}]}}" alt="Spending Pie Chart" class="chart-img">
+                </div>
+                <div class="chart-card">
+                    <h2>Income vs Expenses</h2>
+                    <img src="https://quickchart.io/chart?c={type:'bar',data:{labels:['Income','Expenses'],datasets:[{label:'Amount',data:[2000,800],backgroundColor:['#27ae60','#e74c3c']}]} }" alt="Income vs Expenses Bar Chart" class="chart-img">
+                </div>
+            </div>
+        </div>
+        <div id="profile" class="page" style="display:none;">
+            <h1>Profile</h1>
+            <div class="profile-card">
+                <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="User Avatar" class="avatar">
+                <h2>John Doe</h2>
+                <p>Email: johndoe@email.com</p>
+                <p>Member since: 2023</p>
+            </div>
+        </div>
+        <footer>
+            <p>Made by Oruche Chukwudumebi | 2025</p>
+        </footer>
+    </div>
+</body>
+</html>
